@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: udayranapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udayranapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: udayranapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: udayranapipelinesjavascriptdocker 
+          image: udaysinghrana.azurecr.io/udayranapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
